@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Ad-on Final Project</title>
+    <style>
+        body {
+            background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .theme-button {
+            background: black;
+            border: 1px solid black;
+            color: white;
+            display: block;
+            font-size: 10px;
+            margin: 0 auto;
+            padding: 10 15px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .theme-button:hover {
+            background: white;
+            color: black;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-top: 35px;
+        }
+
+        a {
+            color: black;
+        }
+
+        .shiba-intro-picture {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .shiba-intro-picture:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+
+        .grid {
+            display: grid;
+            margin: 15px 0;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+        }
+
+        .grid img {
+            border-radius: 8px;
+            transition: all 150ms ease-in;
+            width: 100%;
+        }
+
+        .grid img:hover {
+            transform: scale(1.5);
+
+        }
+
+        .sendCookies {
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: block;
+            font-size: 12px;
+            margin: 0 auto;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+            height: 150px;
+            width: 150px;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+
+        footer {
+            font-family: monospace;
+            font-size: 15px;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .dark {
+            background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+        }
+
+        .dark .container {
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+        }
+
+        .dark a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="theme-button">COME TO THE DARKSIDE</button>
+    <div class="container">
+        <h1>
+            Shiba Inu
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/814/original/1639-shiba-heart.png?1710863990"
+                width="50px" height="50px" alt="shiba_heart" />
+        </h1>
+        <h2>
+            My favorite dog breed
+        </h2>
+        <a href="https://en.wikipedia.org/wiki/Shiba_Inu" target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/768/original/patricia-hellinger-9lMv4aHhuRQ-unsplash.jpg?1710848358"
+                alt="" class="shiba-intro-picture" />
+        </a>
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/772/original/tommy-liu-M8aph8Utsao-unsplash.jpg?1710848847"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/771/original/olena-bohovyk-HVuPwUsxelU-unsplash.jpg?1710848839"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/793/original/jules-marvin-eguilos-27hX9sbSI8Y-unsplash.jpg?1710858002"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/792/original/yury-orlov-J16gyd7WtyA-unsplash.jpg?1710857832"
+                alt="" />
+        </div>
+        <p>
+            The Shiba Inu (柴犬, Shiba Inu, Japanese: [ɕiba inɯ]) is a breed of hunting dog from Japan. A small-to-medium
+            breed, it is
+            the smallest of the six original breed of dogs native to Japan. Its name literally translates to "brushwood
+            dog", as
+            it is used to flush game.
+
+            A small, alert, and agile dog that copes very well with mountainous terrain and hiking trails, the Shiba Inu
+            was
+            originally bred for hunting. It looks similar to other Japanese dog breeds such as the Akita Inu or
+            Hokkaido, but
+            the Shiba Inu is a different breed with a distinct bloodline, temperament, and smaller size than other
+            Japanese
+            dog
+            breeds.
+            <br />
+            <br />
+            💻
+            <a href="https://en.wikipedia.org/wiki/Shiba_Inu" target="_blank"><strong>Read more on
+                    Wikipedia</strong></a>
+
+        </p>
+        <button class="sendCookies">Send cookies to the good boys & girls</button>
+    </div>
+    <footer>Coded with 💖 by
+        <a href="https://www.linkedin.com/in/sonjakolmer" target="_blank"><em>Sonja Kolmer</em></a>
+    </footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+                themeButton.textContent = "COME TO THE DARKSIDE";
+            } else {
+                body.classList.add("dark");
+                themeButton.textContent = "STEP INTO THE LIGHT";
+            }
+        }
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+
+        var sendCookies = document.querySelector(".sendCookies");
+        sendCookies.addEventListener("click", function () {
+            alert("🍪🍪🍪\nMany thanks and big Shiba smooches")
+        });
+
+    </script>
+</body>
+
+
+</html>
